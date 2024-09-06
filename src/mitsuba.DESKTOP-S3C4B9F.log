@@ -1,0 +1,4 @@
+2024-08-09 13:36:13 INFO  main [mtsutil.cpp:232] Mitsuba version 0.6.0 (Windows, 64 bit), Copyright (c) 2017 Wenzel Jakob
+2024-08-09 13:36:13 INFO  main [mtsutil.cpp:366] Loading utility "tonemap" ..
+2024-08-09 13:36:13 INFO  main [Tonemap] Loading image "C:\Users\Admin\Documents\003Code\fsnet-lmv\fs-lmv\src\.\result\./LMV/pred_49.exr" ..
+2024-08-09 13:36:13 INFO  main [Tonemap] Writing tonemapped image to ".\result\./LMV/pred_49.png" ..

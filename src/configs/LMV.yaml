@@ -1,0 +1,48 @@
+train_dataset:
+  dataset:
+    name: DmdlDatasetLocal
+    args:
+      root_path: C:\Users\Admin\Documents\005Tasks\00000000_NJUMeta\dataset\MedivalDocks_1\Nojitter-540P
+      working_resolution: 540
+      batch_size: 10
+      frame_offset: 2 # History frames.
+      frame_st: 600
+      frame_ed: 1100
+  wrapper:
+    name: DmdlWrapper
+    args:
+  batch_size: 1
+
+model:
+  name: ShadeNet
+  args:
+    # in_channels: 10
+
+optimizer:
+  name: adam
+  args:
+    lr: 1.e-4
+
+epoch_max: 600
+multi_step_lr:
+  milestones: [20, 40, 60, 80]
+  gamma: 0.5
+epoch_save: 10
+
+test_dataset:
+  dataset:
+    name: DmdlDatasetLocal
+    args:
+      root_path: C:\Users\Admin\Documents\005Tasks\00000000_NJUMeta\dataset\MedivalDocks_1\Nojitter-540P
+      working_resolution: 540
+      batch_size: 5
+      frame_offset: 2 # History frames.
+      frame_st: 503
+      frame_ed: 553
+  wrapper:
+    name: DmdlWrapper
+    args:
+  batch_size: 1
+
+save_name: ./LMV/
+mtsutil_path: C:/Users/Admin/tools/mitsuba_dist/mtsutil.exe
